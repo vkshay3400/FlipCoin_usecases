@@ -4,7 +4,7 @@ echo "*************************Flip Coin*************************"
 
 # CONSTANT
 ISHEAD=1
-SINGLET=1
+DOUBLET=2
 
 # DICTIONARY
 declare -A coinFlip
@@ -48,6 +48,6 @@ done
 }
 
 # PRINT PERCENTAGE
-isflip $SINGLET
-getPercentage $SINGLET
+isflip $DOUBLET
+getPercentage $DOUBLET
 
