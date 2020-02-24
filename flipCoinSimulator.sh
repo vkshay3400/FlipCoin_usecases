@@ -15,11 +15,11 @@ declare -A coinFlip
 read -p "Enter a number to multi-time flip a coin: " flipcoin
 
 # GET RANDOM VALUES
-function isflip(){
-local NumberCoin=$1
+function isFlip(){
+local numberCoin=$1
 for (( flip=0; flip<$flipcoin; flip++ ))
 do
-	for (( coin=0; coin<$NumberCoin; coin++ ))
+	for (( coin=0; coin<$numberCoin; coin++ ))
 	do
 		randomFlipCoin=$((RANDOM%2))
 
@@ -55,15 +55,15 @@ echo "Enter 3 for Triplet "
 read -p "Enter your choice: " choice
 case $choice in
 	$SINGLET)
-	isflip $SINGLET
+	isFlip $SINGLET
 	getPercentage $SINGLET
 	;;
 	$DOUBLET)
-	isflip $DOUBLET
+	isFlip $DOUBLET
 	getPercentage $DOUBLET
 	;;
 	$TRIPLET)
-	isflip $TRIPLET
+	isFlip $TRIPLET
 	getPercentage $TRIPLET
 	;;
 	*)
